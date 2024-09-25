@@ -1,0 +1,47 @@
+/*
+Fernando do Nascimento Benis
+Matricula: 202310215
+
+ Escreva um programa Java para deslocar os elementos positivos de um vetor 
+para a esquerda e os números negativos para a direita. 
+Seu código deverá declarar e construir um vetor de 10 inteiros e pedir 
+para o usuário informar os valores negativos e positivos fora de ordem. 
+Em seguida efetua os deslocamentos dos valores dos elementos e mostre o resultado.
+ */
+package desafiovetor;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class DesafioVetor {
+
+    
+    public static void main(String[] args) {
+        
+        Scanner leia = new Scanner(System.in);
+        int vetor [] = new int [10];
+        int i;
+        int positivo = 0;
+        int negativo = 0;
+        
+        for (i=0; i < 10; i++) {
+       System.out.print("Informe o do " + (i+1) + "º elemento :");
+       vetor[i] = leia.nextInt();
+        }    
+        for (i=0; i < 10; i++) {
+        if (vetor[i] < positivo){
+        positivo = vetor[i];
+        System.out.print("Positivo : " + positivo);
+        
+        for (i=0; i < 10; i++) {
+        if (vetor[i] < negativo){
+        negativo = vetor[i];
+        System.out.print(" Negativo : " + negativo);
+        
+        }
+    }
+        }
+    }
+}
+}

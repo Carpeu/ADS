@@ -1,0 +1,132 @@
+* {
+    margin: 0; /* margin é o espaçamento externo */
+    padding: 0; /* padding é o espaçamento interno*/
+    box-sizing: border-box; /* Usada para respeitar os tamanhos que forem definidos */
+  }
+  /* ROOT - A raiz (elemento) principal do site */
+  :root {
+    font-size: 16px; /* Aqui define o tamanho PADRÃO da fonte do site (px é uma abreviação de pixel)*/
+  }
+  
+
+  /* WebKit (mecanismo de renderização utilizado nos navegadores) para customizando a scrollbar (Barra de Rolagem) */
+  ::-webkit-scrollbar {
+    width: 10px; /* Define a largura da barra de rolagem (scrollbar)*/
+  }
+  /* WebKit usado para customizar a linha por onde a barra percorre  */
+  ::-webkit-scrollbar-track {
+    background-color: #59595f; /* Define a cor da linha por onde a barra percorre (scrollbar) - TRACK - é a região onde a barra vai percorrer */
+  }
+  /* WebKit - THUMB - usado para customizar a barrinha que fica percorrendo pelo track  */
+  ::-webkit-scrollbar-thumb {
+    background-color: #c7c7ca; /* Define a cor da barra de rolagem (scrollbar) */
+  }
+
+
+  /* keyframes são pontos que marcam o início e o final de alguma animação (nesse caso), quando for usar quadros especificos coloca-se a porcentagem de cada quadro*/
+  @keyframes entering {
+    /* FROM - Inicio do efeito opacidade e direção inicial*/
+    from {
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+    /* TO - Fim do efeito opacidade e a direção final*/
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  /* Tudo que estiver entre CHAVES{} são as propriedades e valores que vão afetar
+  o visual da tag<> que está sendo usada nesse caso a tag <body> */
+  body {
+    /* Para esticar imagem de fundo no elemento HTML devemos usar a propriedade CSS «background-size» com valor de «cover» ou «100%» que vai indicar o tamanho do fundo. 
+    Também devemos utilizar o «position:fixed;» para o fundo não fazer «scroll» junto ao conteúdo, caso o conteúdo tenha altura maior que o «viewport».*/
+    background-image: url(./imagem/contabilidade.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* a regra que fará a imagem ocupar todo o viewport (ou tela, se o documento estiver exibido em modo tela-cheia) */
+    background-size: 100% 100%;
+
+    color: #eaeaea; /* Cor padão do texto */
+    font-family: "Roboto", sans-serif; /* Fonte ROBOTO copiada do googles Fonts (SANS-SERIF é uma fonte alternativa caso a fonte roboto não funcione) */
+    display: grid; /* Define o comportamento dos elementos no caso foi usado o grid */
+    grid-template-areas: "profile timeline"; /* Define os nomes para as areas (uma coluna para profile e uma coluna para timeline) */
+    grid-template-columns: 0.3fr 1fr; /* Define o tamanho de cada coluna (1fr significa uma fração da pag para cada coluna usada) */
+    grid-template-rows: 100vh; /* Define as linhas (vh View Highport altura da view da regiaão da tela - deixa a linha flexivel) */
+  }
+
+
+  /* Tag de navegação */
+  nav {
+    padding: 64px; /* Define o espaçamento interno (px é uma abreviação de pixel)*/
+    grid-area: timeline; /* Define a coluna/area de timeline*/
+    overflow-y: scroll; /* o Y é a vertical - SCROLL - usado quando o conteudo não cabe na pagina */
+  
+    animation: entering 0.9s ease-in-out; /* Define a velocidade da animação*/
+  }
+  
+
+  aside {
+    grid-area: profile; /* GRID - estruduras formada por colunas, lacuna e margens - AREA - É a area usada na tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Deixa os elemetos da coluna centralizados na horizontal */
+    justify-content: center; /* Deixa os elemetos da coluna centralizados na vertical */
+    gap: 20px; /* define o espaçamento dos elementos da classe  (px é uma abreviação de pixel)*/
+  
+    border-right: 1px solid; /* Cria uma linha (borda) do lado direito e essaa borda é solida */
+    border-image: linear-gradient(#727275, #2c2c31) 1; /* define a cor da borda utilizada */
+  
+    background-image: url("./background.svg"); /* Imagem de fundo utilizada */
+    background-position: top right; /* Faz o alinhamento da imagem de fundo */
+    background-repeat: no-repeat; /* Usada para não repetir/duplicar a imagem de fundo */
+    background-size: auto 100; /* Usada para se ajustar a imagem de fundo melhor a tela*/
+  }
+  
+  /* A tag ASIDE * - Faz a animação somente nos elementos, e não no background */
+  aside * {
+    animation: entering 0.9s ease-in-out;
+  }
+  
+  aside img:nth-child(1) {
+    width: 200px; /* Define a altura da imagem */
+    height: 200px; /* Define a largura da imagem */
+    border-radius: 50%; /* define o arredondamento da borda da imagem */
+  
+    border: 3px solid transparent; /* define o efeito da borda da imagem */
+    background: linear-gradient(#d39e33, #ed5636, #633bbc) padding-box,
+      linear-gradient(260deg, #d39e33, #ed5636, #633bbc) border-box; /* define as cores utilizadas na borda */
+  }
+  
+  aside p {
+    font-size: 2rem; /* Define o tamanho do texto - o REM - define o tamenho da fonte em relação a fonte de referencia a tag ROOT*/
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  
+  /* @MEDIA - Para vizualização em telas menores*/
+  @media (max-width: 768px) {
+    :root {
+      font-size: 14px;
+    }
+  
+    body {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 0.8fr;
+      grid-template-areas:
+        "profile"
+        "timeline";
+    }
+    aside {
+      border-right: none;
+      padding: 32px 12px;
+    }
+  
+    nav {
+      overflow-y: visible;
+      padding: 22px;
+    }
+  }
+  

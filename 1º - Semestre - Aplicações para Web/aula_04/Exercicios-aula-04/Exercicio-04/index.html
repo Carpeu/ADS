@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Alistamento Militar</title>
+</head>
+<body>
+    <h2>Alistamento Militar</h2>
+    <form action="candidatos.php" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br>
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="">Selecione</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+        </select>
+        <br>
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" required>
+        <br>
+        <label for="saude">Saúde:</label>
+        <select id="saude" name="saude" required>
+            <option value="">Selecione</option>
+            <option value="apto">Apto</option>
+            <option value="inapto">Inapto</option>
+        </select>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #00C4CC !important;
+    max-height: 100px;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.menu {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.btn-login {
+    font-weight: bold !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+}
+
+.bem-vindo{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - 100px);
+}
+
+.index{
+    background-color: #150E60 !important;
+}
+
+.index-propaganda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+.propaganda{
+    color: #fff;
+}
+
+h1 propaganda{
+    font-size: 32px !important;
+}
+
+.text-content {
+    text-align: left;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #666;
+}
+
+.btn-assinatura{
+    color: #fff !important;
+    background-color: #150E60 !important;
+    border: 3px solid #fff !important;
+    border-radius: 20px !important;
+    font-weight: bold !important;
+}

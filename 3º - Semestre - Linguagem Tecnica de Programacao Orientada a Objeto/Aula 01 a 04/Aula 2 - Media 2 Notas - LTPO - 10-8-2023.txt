@@ -1,0 +1,44 @@
+/* Desenvolva um programa em java que 
+solicite ao usuário 2 (duas) notas digitadas pelo 
+usuário (A1 e A2) e ao final calcule a média do 
+referido aluno(a), se média inferior a 6, solicitar 
+uma terceira avaliação (A3) e novamente 
+realizar uma média entre a média anterior e a 
+A3, se mesmo assim o aluno(a) ficar com média 
+inferior a 6, informar que o aluno está 
+reprovado, senão, informa que o aluno está 
+aprovado para o próximo semestre.*/
+
+package media2notas;
+
+import java.util.Scanner;
+
+public class Media2Notas {
+
+    
+    public static void main(String[] args) {
+       Scanner leia = new Scanner(System.in);
+       float a1, a2, a3, media = 0;
+        System.out.println("Digite a nota da A1: ");
+        a1 = leia.nextFloat();
+        System.out.println("Digite a nota da A2: ");
+        a2 = leia.nextFloat();
+        media = (a1 + a2)/2;
+                
+       if (media >=6) {
+	System.out.println ("Aluno aprovado com media " + media);
+                      }
+        else{
+	System.out.println ("Aluno em recuperação " + media);
+           System.out.println("Digite a nota da A3: ");
+           a3 = leia.nextFloat();
+          media = (media + a3)/2;
+           if(media >=6){
+               System.out.println ("Aluno aprovado com media " + media);
+           }
+           else {
+               System.out.println ("Aluno reprovado com media " + media);
+           }
+            }
+    }
+}

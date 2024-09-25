@@ -1,0 +1,61 @@
+body{
+    padding: 0; /* Espaçamento interno*/
+    margin: 0; /* Espaçamento externo*/
+}
+
+form{
+    font-family: Verdana, Tahoma, sans-serif; /* Tipo de fonte */
+    font-size: 15px; /* Tamanho da fonte */
+    background-color: #cc3300; /* cor do fundo */
+    max-width: 500px; /* largura do elemento */
+}
+
+h1{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: #c6ffff;
+    text-shadow: 5px 5px 5px black; /* Define a sombra do elemento */
+}
+
+input, textarea {
+    width: 200px;
+    padding: 10px;
+    color: black;
+    margin-left: 20px;
+    border: 1px solid;
+    -webkit-border-radius:5px ; /* Deixa os cantos arredondados */
+    -moz-border-radius: 5px;
+}
+
+input:hover, textarea:hover, input:focus, textarea:focus{
+    border-color: #000066;
+    background-color: #66FFFF; 
+    color: black;
+    font-weight: bold;
+    box-shadow: 5px 0px 9px #FFFF00;  /* sombra | tamanho | cor*/  
+}
+
+textarea{
+    width: 400px;
+    height: 120px;
+    line-height: 20px; /* Espaçamento entre linhas do texto */
+    max-width: 400px;
+}
+
+form label{
+    margin-left: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.novo input{
+    background-color: #66ffff;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border: 1px solid;
+    color: black;
+    border-radius: 5px;
+    -webkit-border-radius:5px ; /* Deixa os cantos arredondados */
+    -moz-border-radius: 5px;
+}

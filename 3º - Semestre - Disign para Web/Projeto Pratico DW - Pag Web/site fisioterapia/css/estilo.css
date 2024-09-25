@@ -1,0 +1,238 @@
+
+/* WebKit (mecanismo de renderização utilizado nos navegadores) para customizando a scrollbar (Barra de Rolagem) */
+::-webkit-scrollbar {
+    width: 10px; /* Define a largura da barra de rolagem (scrollbar)*/
+  }
+  /* WebKit usado para customizar a linha por onde a barra percorre  */
+  ::-webkit-scrollbar-track {
+    background-color: rgb(192, 202, 190); /* Define a cor da linha por onde a barra percorre (scrollbar) - TRACK - é a região onde a barra vai percorrer */
+  }
+  /* WebKit - THUMB - usado para customizar a barrinha que fica percorrendo pelo track  */
+  ::-webkit-scrollbar-thumb {
+    background-color: #5f5f69; /* Define a cor da barra de rolagem (scrollbar) */
+  }
+
+  .whatsapp {
+    position: fixed;
+    top: 86%;
+    right: 1%;
+    padding: 10px;
+    z-index: 10000000;
+    }
+    .whatsapp img {
+    position:fixed;
+    bottom:20px;
+    right:30px;
+    }
+
+/*cabeçalho------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/	
+body{
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    background-image: url("../img/area-fundo.png");
+    background-repeat: no-repeat; /* evita a repetição da imagem */
+     background-position: center; /* centraliza a imagem no elemento */
+    background-size: cover;
+}
+.cabeçalho{
+    text-align: center;
+    color: rgb(32, 143, 18);
+    border-bottom: rgb(32, 143, 18) solid 3px; 
+    
+}
+
+header{
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    position: fixed;
+    width:100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: rgb(32, 143, 18) solid 3px;
+  }
+  
+  
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    nav ul li a {
+        color: #0d9218;
+        text-decoration: none;
+        padding: 10px 12px;
+        vertical-align: 15px ;
+        
+    }
+    
+    main {
+      padding-top: 2px; /* Altura do menu */
+    }
+  
+  
+  
+  nav a:hover{
+      transition: 0.5s;
+      background-color: #cefad4;
+      color: #960b0b;
+  }
+
+
+/*cabeçalho------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.conteudo {
+    margin-top: 10px;
+}
+.conteudo img{
+    width: 100%;
+}
+/*Serviços------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.content-section{
+    color: #000000;
+    text-align: center;
+   
+    
+}
+
+.content-section h1{
+    color: rgb(0, 102, 0);
+    font-size: 200%
+}
+
+.content-section1 {
+    display: block;
+    float: left;
+    width: 33%;
+    padding-bottom: 20px;
+     
+   
+}
+
+.content-img {
+    display: inline-block;
+    padding: 30px;
+    text-align: center;
+}
+.content-img p{
+    text-transform: uppercase;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 35px;
+    
+
+}
+
+/*Serviços------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*formulario------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+form{
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 15px;
+	
+	max-width: 100%; /* tamanho máximo do elemento*/
+    text-align: center;
+}
+
+h1{
+	margin-bottom: 20px;
+	margin-left: 20px;
+	color: #000000;
+	text-shadow: 5px 5px 5px 5px black;
+}
+
+input, textarea{
+	width: 200px;
+	padding: 10px;
+	margin-left: 20px;
+	border: 1px solid;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+p{
+	font-size: 20;
+	    text-align: center;
+	
+	
+	
+}
+input:hover, textarea:hover, input:focus, textarea:focus{
+	border-color: #000066;
+	background-color: #acacac;
+	color: black;
+	font-weight: bold;
+	box-shadow: 5px 0px 9px  #0d9218;
+}
+
+form label{
+	margin-left: 20px;
+	
+	font-weight: bold;
+}
+
+.joaozinho input{
+	background-color: #ffffff;
+	height: 40px;
+	width: 100px;
+	font-weight: bold;
+	border: 1px solid;
+	color: black;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+h3{
+    text-transform: uppercase;
+	font-size: 25;
+	font-family: Gotham ;
+}
+
+
+footer {
+    background-color: rgb(32, 143, 18);
+    color: black;
+    padding: 0.2px;
+    text-align: center;
+  }
+
+/*formulario------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.black{
+	    text-align: center;
+      justify-content: center;
+}
+
+
+th{
+	
+		font-size: 22;
+	
+}
+
+@media (max-width: 768px) {
+    :root {
+      font-size: 14px;
+    }
+    body {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 0.8fr;
+      grid-template-areas:
+        "profile"
+        "timeline";
+    }
+    section {
+      border-right: none;
+      padding: 32px 12px;
+    }
+    nav {
+      overflow-y: visible;
+      padding: 22px;
+    }
+  }

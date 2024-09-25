@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desconto CARANGO</title>
+</head>
+<body>
+    <h2>Calculo do Desconto</h2>
+    <form action="carango.php" method="post">
+        <label for="valor_veiculo">Valor do Veículo:</label>
+        <input type="number" id="valor_veiculo" name="valor_veiculo" required>
+        <br>
+        <label for="combustivel">Combustível:</label>
+        <select id="combustivel" name="combustivel" required>
+            <option value="">Selecione</option>
+            <option value="alcool">Álcool</option>
+            <option value="gasolina">Gasolina</option>
+            <option value="diesel">Diesel</option>
+        </select>
+        <br>
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/*
+Fernando do Nascimento Benis
+Matricula: 202310215
+
+ Escreva um programa Java para deslocar os elementos positivos de um vetor 
+para a esquerda e os números negativos para a direita. 
+Seu código deverá declarar e construir um vetor de 10 inteiros e pedir 
+para o usuário informar os valores negativos e positivos fora de ordem. 
+Em seguida efetua os deslocamentos dos valores dos elementos e mostre o resultado.
+ */
+package desafiovetor;
+
+
+import java.util.Scanner;
+
+
+public class DesafioVetor {
+
+    
+    public static void main(String[] args) {
+        
+       int[] vetor = new int[10];
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite os valores do vetor (positivos e negativos):");
+        for (int i = 0; i < vetor.length; i++) {
+            vetor[i] = scanner.nextInt();
+        }
+
+        int[] resultado = deslocarElementos(vetor);
+
+        System.out.println("Resultado do deslocamento:");
+        for (int valor : resultado) {
+            System.out.print(valor + " ");
+        }
+    }
+
+    public static int[] deslocarElementos(int[] vetor) {
+        int[] resultado = new int[vetor.length];
+        int indiceEsquerda = 0;
+        int indiceDireita = resultado.length - 1;
+
+        for (int valor : vetor) {
+            if (valor < 0) {
+                resultado[indiceDireita] = valor;
+                indiceDireita--;
+            } else {
+                resultado[indiceEsquerda] = valor;
+                indiceEsquerda++;
+            }
+        }
+
+        return resultado;
+    }
+}
+
+======================================================================
+
+Explicação do código:
+
+1- Declaramos um vetor de tamanho 10 usando int[] vetor = new int[10];.
+
+2 - Criamos um objeto Scanner para ler a entrada do usuário: Scanner scanner = new Scanner(System.in);.
+
+3 - Solicitamos ao usuário que digite os valores do vetor, incluindo valores positivos e negativos: System.out.println("Digite os valores do vetor (positivos e negativos):");.
+
+4 - Utilizamos um loop for para percorrer o vetor e armazenar os valores digitados pelo usuário: for (int i = 0; i < vetor.length; i++) { vetor[i] = scanner.nextInt(); }.
+
+5 - Criamos um método chamado deslocarElementos que recebe o vetor como parâmetro e retorna o vetor resultante após o deslocamento.
+
+6 - Dentro do método deslocarElementos, criamos um vetor resultado com o mesmo tamanho do vetor original: int[] resultado = new int[vetor.length];.
+
+7 - Inicializamos dois índices, indiceEsquerda e indiceDireita, que serão usados para posicionar os elementos positivos e negativos, respectivamente.
+
+8 - Percorremos o vetor original com um loop for-each e verificamos se o valor é negativo (valor < 0). Se for negativo, 
+colocamos o valor no índice correspondente do lado direito do vetor resultante (resultado[indiceDireita] = valor; indiceDireita--;); 
+caso contrário, colocamos o valor no índice correspondente do lado esquerdo do vetor resultante (resultado[indiceEsquerda] = valor; indiceEsquerda++;).
+
+9 - Retornamos o vetor resultante no final do método deslocarElementos.
+
+10 - No método main, chamamos o método deslocarElementos passando o vetor digitado pelo usuário e armazenamos o resultado em um novo vetor chamado resultado.
+
+11 - Por fim, percorremos o vetor resultante e o exibimos na tela.
+
+Esse programa solicita ao usuário que digite os valores do vetor, por exemplo: [-2, 4, -7, 1, -9, 5, 3, -6, 8, -10]. Em seguida, 
+ele desloca os elementos negativos para a direita e os elementos positivos para a esquerda. 
+O resultado final será exibido na tela: [4, 1, 5, 3, 8, -2, -7, -9, -6, -10].

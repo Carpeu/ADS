@@ -1,0 +1,43 @@
+/*
+ Faça um programa em Java que calcule e exiba o valor do desconto e o valor a ser pago 
+pelo cliente de vários carros. O desconto deverá ser calculado de acordo com o ano do veículo. 
+Até 2000 desconto de 12% e acima de 2000 desconto de 7%. O sistema deverá perguntar se 
+deseja continuar calculando novos descontos até que a resposta seja: "( N ) de Não )". 
+Informar o total de carros com ano até 2000 e o total de carros no geral.
+ */
+
+package exe1aula4carros;
+
+import java.util.Scanner;
+
+public class Exe1Aula4Carros {
+ 
+    public static void main(String[] args) {
+        
+        Scanner leia = new Scanner(System.in);
+        float valorCarro, desconto, carroDesconto;
+        int anoCarro;
+        
+        System.out.println("\nDigite o Valor do Carro: ");
+        valorCarro = leia.nextFloat();
+  
+        System.out.println("\nDigite o ano do Carro: ");
+        anoCarro = leia.nextInt();  
+        
+        // Se, o ano do carro for menor igual ao ano 2000 desconto de 12%
+        if (anoCarro <= 2000){ 
+        desconto = ( valorCarro * 12 ) / 100;
+        carroDesconto = valorCarro - desconto;
+        System.out.println("O desconto do carro sera de: " + desconto + 
+                        "\n O valor do carro sera: " + carroDesconto); 
+   }
+       // Se não, o ano do carro for maior que ano 2000 desconto de 7% 
+        else{  
+        desconto = ( valorCarro * 7 ) / 100;    
+        carroDesconto = valorCarro - desconto;
+        System.out.println("O desconto do carro sera de: " + desconto + 
+                        "\n O valor do carro sera: " + carroDesconto);
+        
+   }
+    }
+}
